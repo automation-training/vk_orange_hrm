@@ -8,6 +8,10 @@ import org.testng.annotations.Test;
 import com.orangehrm.LoginPage;
 import com.orangehrm.OrangeHRM;
 
+import ru.yandex.qatools.allure.annotations.Features;
+import ru.yandex.qatools.allure.annotations.Stories;
+
+@Features("Authentication")
 public class NegativeLoginTest {
 
 	private LoginPage onLoginPage;
@@ -17,6 +21,7 @@ public class NegativeLoginTest {
 		onLoginPage = OrangeHRM.openOnLoginPage();
 	}
 
+	@Stories("Negative auth")
 	@Test
 	public void testNumberOne() {
 		String expectedInvalidCredentialsMessage = "Invalid credentials";
@@ -30,6 +35,7 @@ public class NegativeLoginTest {
 		Assert.assertTrue(actualInvalidCredentialsMessage.contains(expectedInvalidCredentialsMessage));
 	}
 
+	@Stories("Negative auth")
 	@Test
 	public void testNumberTwo() {
 		String invalidMessage = "Invalid credentials";

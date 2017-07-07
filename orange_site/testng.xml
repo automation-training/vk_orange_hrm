@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression">
+
+	<test name="Authentication">
+		<classes>
+			<class name="com.orange.LoginAsAdminTest"></class>
+		</classes>
+	</test>
+	
+	<test name="Authentication - negative scenarious">
+		<classes>
+			<class name="com.orange.NegativeLoginTest"></class>
+		</classes>
+	</test>
+
+</suite>
